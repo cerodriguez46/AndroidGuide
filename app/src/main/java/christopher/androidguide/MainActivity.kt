@@ -1,6 +1,7 @@
 package christopher.androidguide
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.support.v7.app.AppCompatActivity
@@ -11,6 +12,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
     }
 
     fun sendMessage(view: View) {
@@ -31,6 +34,15 @@ class MainActivity : AppCompatActivity() {
          intent.putExtra(EXTRA_MESSAGE, message);
          startActivity(intent);
      }*/
+
+    fun openBrowser(view: View) {
+        val webPage: Uri = Uri.parse("www.google.com")
+        val intent = Intent(Intent.ACTION_VIEW, webPage)
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+
+    }
 
 
 }
