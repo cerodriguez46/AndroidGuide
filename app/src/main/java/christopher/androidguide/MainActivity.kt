@@ -21,4 +21,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+    //Java version of explicit intent below
+
+    /* public void sendMessage(View view)
+     {
+         String message = "This is the message passed between activities";
+         Intent intent = new Intent(this, SecondActivity.class);
+         intent.putExtra(EXTRA_MESSAGE, message);
+         startActivity(intent);
+     }*/
+
+
 }
+
