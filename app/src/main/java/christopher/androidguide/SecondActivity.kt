@@ -13,6 +13,8 @@ class SecondActivity : AppCompatActivity() {
         val message = intent.getStringExtra(EXTRA_MESSAGE)
         println(message)
 
-
+/*Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        System.out.println(message);*/
     }
 }
