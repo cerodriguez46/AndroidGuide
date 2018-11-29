@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     fun sendMessage(view: View) {
         val message = "This is the message passed between activities"
-        val Intent = Intent(this, SecondActivity::class.java).apply {
+        val intent = Intent(this, SecondActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE, message)
         }
         startActivity(intent)
